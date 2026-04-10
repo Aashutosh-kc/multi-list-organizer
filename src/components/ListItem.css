@@ -1,0 +1,44 @@
+.add-activity{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	background: #c7d2fe;
+	width: fit-content;
+	margin: 0 auto;
+	padding: 20px;
+	border-radius: 8px;
+}
+.add-activity .user-input{
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+.add-activity input{
+	border: none;
+	border-radius: 8px;
+	padding: 8px 16px;
+
+}
+.add-activity button{
+	border: none;
+	border-radius: 8px;
+	padding: 8px 16px;
+	background: #6366f1;
+	color: #111827;
+	cursor: pointer;
+}
+.add-activity button:hover{
+	opacity: 0.8;
+}
+.add-activity ul{
+	display: flex;
+	flex-direction: column;
+
+	gap: 8px;
+}
+.add-activity ul li{
+	width: 100%;
+	background: #818cf8;
+	
+}
