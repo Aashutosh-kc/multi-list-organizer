@@ -1,18 +1,62 @@
-# React + Vite
+# Multi List Organizer 📋
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Create multiple lists, add items to each — all in a dark, color-coded UI.
 
-Currently, two official plugins are available:
+## Live Demo
+🔗 [multi-list-organizer.vercel.app](https://multi-list-organizer.vercel.app)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Preview
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
 
-Note: This will impact Vite dev & build performances.
 
-## Expanding the ESLint configuration
+![Preview](preview.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+---
+
+## Features
+
+- 🗂️ Create as many lists as you need
+- ✏️ Add items to each list independently
+- 🎨 Each card gets its own accent color
+- 🌙 Dark mode UI
+
+---
+
+## Built With
+
+<table>
+  <tr>
+    <td align="center" width="80">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="48" height="48" alt="React" />
+      <br><sub>React</sub>
+    </td>
+    <td align="center" width="80">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="48" height="48" alt="Vite" />
+      <br><sub>Vite</sub>
+    </td>
+    <td align="center" width="80">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="48" height="48" alt="JavaScript" />
+      <br><sub>JavaScript</sub>
+    </td>
+    <td align="center" width="80">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="48" height="48" alt="CSS3" />
+      <br><sub>CSS3</sub>
+    </td>
+  </tr>
+</table>
+
+---
+
+## Run Locally
+
+```bash
+git clone https://github.com/Aashutosh-kc/multi-list-organizer.git
+cd multi-list-organizer
+npm install
+npm run dev
+```
+Built as part of my frontend development journey.
