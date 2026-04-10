@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './ListItem.css';
-function ListItem({list,addItem}){
+function ListItem({list,addItem,color}){
 	const [input,setInput] = useState('');
 
 	function handleAdd(){
@@ -9,7 +9,7 @@ function ListItem({list,addItem}){
 		setInput('');
 	}
 	return(
-	<div className="add-activity">
+	<div className="add-activity" style={{ '--card-accent': color}}>
 		<h2>{list.title}</h2>
 		<div className="user-input">
 		<input type="text" value={input} placeholder="e.g. Vegetables"

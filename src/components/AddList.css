@@ -2,20 +2,30 @@
 	display: flex;
 	gap: 8px;
 	justify-content: center;
-	border: 1.5px solid #E5E7EB;
+	border: 1.5px solid #2d2d3a;
 	width: fit-content;
 	margin: 16px auto;
-	background: #c7d2fe;
+	background: #1a1a24;
 	border-radius: 8px;
 	padding: 20px;
+	max-width: 420px;
 }
 .add-list input{
 	border-radius: 8px;
 	padding: 8px 12px;
-	border: 1.5px solid #c7d2fe;
+	border: 1.5px solid #2d2d3a;
 	outline: none;
-	background: white;
+	background: #1a1a24;
+	color: #f1f5f9;
 }
+.add-list input::placeholder{
+	color: #6b7280;
+}
+.add-list input:focus{
+	color: #818cf8;
+}
+
+
 .add-list button{
 	border: none;
 	border-radius: 8px;

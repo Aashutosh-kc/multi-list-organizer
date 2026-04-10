@@ -3,14 +3,14 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 12px;
-	background: white;
-	width: 260px;
+	background: #1a1a24;
+	width: 300px;
 	padding: 20px;
 	border-radius: 12px;
-	box-shadow: 0 2px 8px rgba(99,102, 241, 0.1);
+	box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 .add-activity h2{
-	color: #4338ca;
+	color: white;
 	font-size: 16px;
 	font-weight: 700;
 	text-align: center;
@@ -27,16 +27,24 @@
 	border-radius: 8px;
 	padding: 8px 16px;
 	outline: none;
-	background: #F5F7FF;
+	background: #0f0f13;
+	color: #f1f5f9;
+}
+.add-activity input::placeholder{
+	color: #6b7280;
+}
+.add-activity input:focus{
+	border-color: var(--card-accent);
 }
 .add-activity button{
 	border: none;
 	border-radius: 8px;
 	padding: 8px 16px;
-	background: #6366f1;
+	background: var(--card-accent);
 	color: white;
 	cursor: pointer;
 }
+
 .add-activity button:hover{
 	opacity: 0.8;
 }
@@ -49,8 +57,9 @@
 }
 .add-activity ul li{
 	width: 100%;
-	background: #eef2ff;
+	background: #0f0f13;
 	padding: 8px 12px;
 	border-radius: 6px;
-	border-left: 3px solid #6366f1;
+	border-left: 3px solid var(--card-accent);
+	color: #cbd5e1;
 }
