@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './ListItem.css';
-function ListItem({list,addItem,color}){
+function ListItem({list,addItem,color,removeListItem}){
 	const [input,setInput] = useState('');
 
 	function handleAdd(){
@@ -10,14 +10,18 @@ function ListItem({list,addItem,color}){
 	}
 	return(
 	<div className="add-activity" style={{ '--card-accent': color}}>
-		<h2>{list.title}</h2>
+		<div className="title">
+		<h2>{list.title}</h2><button onClick={() => removeListItem(list.id)}>X</button>
+		</div>
 		<div className="user-input">
 		<input type="text" value={input} placeholder="e.g. Vegetables"
 		onChange={(e) => setInput(e.target.value)} />
-		<button onClick={handleAdd}>Add</button>
+		<button onClick={handleAdd} className='add-btn' >Add</button>
 		</div>
 		<ul>
-		{list.items.map((item) => (<li key={item.id}>{item.value}</li>))}	
+		{list.items.map((item) => (<li key={item.id}>
+			<p>{item.value}</p>
+			</li>))}	
 		</ul>
 	</div>)
 }

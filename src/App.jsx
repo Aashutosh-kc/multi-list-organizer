@@ -11,10 +11,11 @@ function App(){
       items: [...l.items,newItem]}:l));
   }
 
+
   return(
   <div>
     <AddList setList={setList} />
-    <AllLists list={list} addItem={addItem} />
+    <AllLists list={list} addItem={addItem} setList={setList}/>
       </div>)
 }
 export default App;

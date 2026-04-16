@@ -9,11 +9,26 @@
 	border-radius: 12px;
 	box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
+.title{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+.title button{
+	margin-left: auto;
+	margin-right: 4px;
+	border: none;
+	border-radius: 8px;
+	padding: 8px 16px;
+	background: var(--card-accent);
+	color: white;
+	cursor: pointer;
+}
 .add-activity h2{
 	color: white;
 	font-size: 16px;
 	font-weight: 700;
-	text-align: center;
+	
 }
 .add-activity .user-input{
 	display: flex;
@@ -36,7 +51,7 @@
 .add-activity input:focus{
 	border-color: var(--card-accent);
 }
-.add-activity button{
+.add-btn{
 	border: none;
 	border-radius: 8px;
 	padding: 8px 16px;
@@ -62,4 +77,11 @@
 	border-radius: 6px;
 	border-left: 3px solid var(--card-accent);
 	color: #cbd5e1;
+	display: flex;
+	align-items: center;
+
+
 }
+.add-activity li button{
+	margin-left: auto;
+} 
