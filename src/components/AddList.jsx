@@ -14,12 +14,16 @@ function AddList({setList}){
 		setList((prev) => [...prev, newList]);
 		setTitle('')
 	}
-
+	function handleKeyDown(e){
+		if (e.key == "Enter"){
+			handleSubmit();
+		}
+	}
 	return (
 	<div className="add-list">
 		
 		<input type="text" placeholder="e.g. Grocery items" 
-		value={title} 
+		value={title} onKeyDown={handleKeyDown}
 		onChange={(e) => setTitle(e.target.value)} />
 		<button onClick={handleSubmit}>Add</button>
 	</div>
