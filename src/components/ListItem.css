@@ -10,13 +10,16 @@
 	box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 .title{
+	position: relative;
 	display: flex;
-	flex-direction: row;
+	justify-content: center;
 	align-items: center;
+	width: 100%;
 }
-.title button{
-	margin-left: auto;
-	margin-right: 4px;
+
+.title .del-btn{
+	position: absolute;
+	right: 4px;
 	border: none;
 	border-radius: 8px;
 	padding: 8px 16px;
@@ -24,11 +27,11 @@
 	color: white;
 	cursor: pointer;
 }
-.add-activity h2{
+.title h2{
 	color: white;
 	font-size: 16px;
 	font-weight: 700;
-	
+	text-align: center;
 }
 .add-activity .user-input{
 	display: flex;

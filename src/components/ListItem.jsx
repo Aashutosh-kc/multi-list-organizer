@@ -16,7 +16,7 @@ function ListItem({list,addItem,color,removeListItem}){
 	return(
 	<div className="add-activity" style={{ '--card-accent': color}}>
 		<div className="title">
-		<h2>{list.title}</h2><button onClick={() => removeListItem(list.id)}>X</button>
+		<h2>{list.title}</h2><button className = "del-btn"onClick={() => removeListItem(list.id)}>X</button>
 		</div>
 		<div className="user-input">
 		<input type="text" value={input} placeholder="e.g. Vegetables"
