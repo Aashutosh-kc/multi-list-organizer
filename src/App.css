@@ -1,0 +1,25 @@
+.title {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 28px;
+}
+
+.description {
+  text-align: center;
+  color: #9ca3af;
+  margin-bottom: 24px;
+}
+
+fieldset {
+  max-width: 1100px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  border: 1px solid #2d2d3a;
+  border-radius: 12px;
+}
+
+legend {
+  padding: 0 8px;
+  font-weight: 600;
+  color: #cbd5e1;
+}

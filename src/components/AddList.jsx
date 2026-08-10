@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './AddList.css'
-function AddList({setList}){
+function AddList({setList,list}){
 
 	const [title,setTitle] = useState('');
 
@@ -25,7 +25,7 @@ function AddList({setList}){
 		<input type="text" placeholder="e.g. Grocery items" 
 		value={title} onKeyDown={handleKeyDown}
 		onChange={(e) => setTitle(e.target.value)} />
-		<button onClick={handleSubmit}>Add</button>
+		<button onClick={handleSubmit} disabled={title.trim() === ""}>Add</button>
 	</div>
 	)
 }

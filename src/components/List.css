@@ -1,0 +1,90 @@
+.add-activity {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: #1a1a24;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.add-activity .title {
+  position: relative;
+  padding: 4px 0;
+}
+
+.add-activity .title h2 {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
+
+.add-activity .del-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  border-radius: 6px;
+  padding: 4px 6px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+}
+.user-input {
+  display: flex;
+  gap: 8px;
+}
+
+.add-activity input {
+  flex: 1;
+  border: 1.5px solid #2d2d3a;
+  border-radius: 8px;
+  padding: 8px 12px;
+  outline: none;
+  background: #0f0f13;
+  color: #f1f5f9;
+}
+
+.add-activity input:focus {
+  border-color: var(--card-accent);
+}
+
+.add-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  background: var(--card-accent);
+  color: white;
+  cursor: pointer;
+}
+
+.add-activity ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.add-activity li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f0f13;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border-left: 3px solid var(--card-accent);
+  color: #cbd5e1;
+}
+
+.add-activity li button {
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.add-activity li button:hover {
+  color: #f87171;
+}
