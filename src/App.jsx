@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import AddList from './components/AddList.jsx'
 import './App.css'
+import {ScrollText } from "lucide-react"
 import AllLists from './components/AllLists.jsx'
 export default function App(){
 
@@ -14,7 +15,7 @@ export default function App(){
 
   return(
     <div>
-      <h2 className='title' >Multi-List Organizer</h2>
+      <h2 className='title' ><ScrollText size={28}/><p>Multi-List Organizer</p></h2>
       <p className='description'>Add Multiple Lists and arrange them</p>
       <AddList setList={setList} list={list} />
       <fieldset>
