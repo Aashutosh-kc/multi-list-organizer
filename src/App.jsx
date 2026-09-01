@@ -19,6 +19,7 @@ export default function App(){
       <AddList setList={setList} list={list} />
       <fieldset>
         <legend>Lists</legend>
+        {list.length === 0 && <p>No lists made.</p>}
       <AllLists list={list} addItem={addItem} setList={setList}/>
       </fieldset>
     </div>
