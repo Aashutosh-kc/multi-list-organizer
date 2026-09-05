@@ -11,7 +11,7 @@ Create multiple lists, add items to each — all in a dark, color-coded UI.
 
 
 
-![Preview](src/preview/preview2.png)
+![Preview](src/preview/preview.png)
 
 
 
