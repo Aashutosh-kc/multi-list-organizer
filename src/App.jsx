@@ -1,17 +1,23 @@
-import { useState } from 'react';
+import { useState ,useEffect} from 'react';
 import AddList from './components/AddList.jsx'
 import './App.css'
 import {ScrollText } from "lucide-react"
 import AllLists from './components/AllLists.jsx'
+
 export default function App(){
 
-  const[list,setList] = useState([]);
+  const[list,setList] = useState(()=>{
+    const saved = localStorage.getItem('list');
+    return saved ? JSON.parse(saved) : [];
+  });
 
   function addItem(listId,newItem){
     setList((prev) => prev.map((l) => l.id=== listId?{...l,
       items: [...l.items,newItem]}:l));
   }
-
+  useEffect(()=>{
+    localStorage.setItem('list',JSON.stringify(list));
+  },[list])
 
   return(
     <div>
