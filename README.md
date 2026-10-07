@@ -22,6 +22,7 @@ Create multiple lists, add items to each — all in a dark, color-coded UI.
 - 🗂️ Create as many lists as you need
 - ✏️ Add items to each list independently
 - 🎨 Each card gets its own accent color
+- ❌ Delete any list or the list's items
 - 🌙 Dark mode UI
 
 ---
