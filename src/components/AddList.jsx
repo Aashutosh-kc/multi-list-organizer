@@ -1,32 +1,35 @@
 import { useState } from 'react';
 import './AddList.css'
-function AddList({setList,list}){
 
-	const [title,setTitle] = useState('');
+function AddList({ setList, setCurrentListId }){
+	const [title, setTitle] = useState('');
 
 	function handleSubmit(){
-		if (title === "" || title === " ") return;
-		const newList={
+		const trimmed = title.trim();
+		if (trimmed === "") return;
+		const newList = {
 			id: Date.now(),
-			title: title,
+			title: trimmed,
 			items: []
 		}
 		setList((prev) => [...prev, newList]);
-		setTitle('')
+		setCurrentListId(newList.id);
+		setTitle('');
 	}
+
 	function handleKeyDown(e){
-		if (e.key == "Enter"){
+		if (e.key === "Enter"){
 			handleSubmit();
 		}
 	}
+
 	return (
-	<div className="add-list">
-		
-		<input type="text" placeholder="e.g. Grocery items" 
-		value={title} onKeyDown={handleKeyDown}
-		onChange={(e) => setTitle(e.target.value)} />
-		<button onClick={handleSubmit} disabled={title.trim() === ""}>Add</button>
-	</div>
+		<div className="add-list">
+			<input type="text" placeholder="e.g. Grocery items"
+				value={title} onKeyDown={handleKeyDown}
+				onChange={(e) => setTitle(e.target.value)} />
+			<button onClick={handleSubmit} disabled={title.trim() === ""}>Add</button>
+		</div>
 	)
 }
 export default AddList;

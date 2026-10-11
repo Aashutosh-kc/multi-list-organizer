@@ -1,5 +1,30 @@
 .all-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.list-title {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 16px;
+  text-align: left;
+  color: #cbd5e1;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.list-title:hover {
+  background: #1a1a24;
+}
+
+.list-title.active {
+  background: #1a1a24;
+  color: white;
+  box-shadow: inset 3px 0 0 #6366f1;
 }

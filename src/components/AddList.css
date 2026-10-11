@@ -1,23 +1,23 @@
 .add-list {
   display: flex;
   gap: 8px;
-  justify-content: center;
-  border: 1.5px solid #2d2d3a;
-  width: fit-content;
-  margin: 16px auto;
+  width: 100%;
+  padding: 12px;
   background: #1a1a24;
-  border-radius: 8px;
-  padding: 20px;
-  max-width: 420px;
+  border: 1px solid #2d2d3a;
+  border-radius: 12px;
 }
 
 .add-list input {
-  border-radius: 8px;
+  flex: 1;
+  min-width: 0;
   padding: 8px 12px;
-  border: 1.5px solid #2d2d3a;
-  outline: none;
+  font-size: 16px;
   background: #0f0f13;
   color: #f1f5f9;
+  border: 1.5px solid #2d2d3a;
+  border-radius: 8px;
+  outline: none;
 }
 
 .add-list input::placeholder {
@@ -29,13 +29,13 @@
 }
 
 .add-list button {
-  border: none;
-  border-radius: 8px;
   padding: 8px 16px;
+  font-size: 16px;
   background: #6366f1;
   color: white;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  transition: opacity 0.2s;
 }
 
 .add-list button:hover:not(:disabled) {

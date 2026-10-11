@@ -1,22 +1,28 @@
 .add-activity {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  background: #1a1a24;
+  gap: 16px;
   padding: 20px;
+  background: #1a1a24;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  min-width: 0;
+  width: 100%;
 }
 
 .add-activity .title {
   position: relative;
-  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 40px;
 }
 
 .add-activity .title h2 {
-  width: 100%;
+  font-size: 18px;
   text-align: center;
-  font-size: 16px;
+  overflow-wrap: anywhere;
 }
 
 .add-activity .del-btn {
@@ -24,14 +30,22 @@
   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  border: none;
-  border-radius: 6px;
-  padding: 4px 6px;
-  background: #ef4444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
   color: white;
+  background: #ef4444;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 10px;
 }
+
+.add-activity .del-btn:hover {
+  opacity: 0.85;
+}
+
 .user-input {
   display: flex;
   gap: 8px;
@@ -39,12 +53,14 @@
 
 .add-activity input {
   flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #f1f5f9;
+  background: #0f0f13;
   border: 1.5px solid #2d2d3a;
   border-radius: 8px;
-  padding: 8px 12px;
   outline: none;
-  background: #0f0f13;
-  color: #f1f5f9;
 }
 
 .add-activity input:focus {
@@ -52,36 +68,65 @@
 }
 
 .add-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: white;
+  background: var(--card-accent);
   border: none;
   border-radius: 8px;
-  padding: 8px 16px;
-  background: var(--card-accent);
-  color: white;
   cursor: pointer;
 }
 
+.add-btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.add-btn:disabled {
+  background: #2d2d3a;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+
+.no-items {
+  font-size: 16px;
+  color: #6b7280;
+  text-align: center;
+}
+
 .add-activity ul {
-  list-style: none;
   display: flex;
   flex-direction: column;
   gap: 8px;
+  list-style: none;
 }
 
 .add-activity li {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  background: #0f0f13;
-  padding: 8px 12px;
-  border-radius: 6px;
-  border-left: 3px solid var(--card-accent);
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
   color: #cbd5e1;
+  background: #0f0f13;
+  border-left: 3px solid var(--card-accent);
+  border-radius: 6px;
+}
+
+.add-activity li p {
+  min-width: 0;
+  font-size: 16px;
+  overflow-wrap: anywhere;
 }
 
 .add-activity li button {
-  border: none;
-  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
   color: #6b7280;
+  background: transparent;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
