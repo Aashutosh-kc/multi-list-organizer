@@ -1,29 +1,29 @@
 # Multi List Organizer 📋
 
-Create multiple lists, add items to each — all in a dark, color-coded UI.
+Create multiple lists, add items to each, and keep everything organized in a dark, color-coded UI.
 
 ## Live Demo
+
 🔗 [multi-list-organizer.vercel.app](https://multi-list-organizer.vercel.app)
 
 ---
 
 ## Preview
 
-
-
 ![Preview](src/preview/preview.png)
-
-
 
 ---
 
 ## Features
 
-- 🗂️ Create as many lists as you need
+- 🗂️ Create multiple lists
 - ✏️ Add items to each list independently
-- 🎨 Each card gets its own accent color
-- ❌ Delete any list or the list's items
-- 🌙 Dark mode UI
+- 🎨 Color-coded lists with their own accent colors
+- ❌ Delete lists and individual items
+- 🔗 Open each list on its own page using React Router
+- 🧭 Switch between lists using the sidebar
+- 🌙 Dark UI with a scrollable list sidebar
+- 💾 Save lists in localStorage so they stay after refreshing the page
 
 ---
 
@@ -40,12 +40,12 @@ Create multiple lists, add items to each — all in a dark, color-coded UI.
       <br><sub>Vite</sub>
     </td>
     <td align="center" width="80">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="48" height="48" alt="JavaScript" />
-      <br><sub>JavaScript</sub>
-    </td>
-    <td align="center" width="80">
       <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="48" height="48" alt="CSS3" />
       <br><sub>CSS3</sub>
+    </td>
+    <td align="center" width="80">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="48" height="48" alt="React Router" />
+      <br><sub>React-Router</sub>
     </td>
   </tr>
 </table>
@@ -60,4 +60,5 @@ cd multi-list-organizer
 npm install
 npm run dev
 ```
-Built as part of my frontend development journey.
+
+Built while learning React and improving my frontend skills.
