@@ -22,32 +22,61 @@ export default function List({ list, addItem, color, removeList, removeListItem 
 	}
 
 	return (
-		<div className="add-activity" style={{ '--card-accent': color }}>
-			<div className="title">
-				<h2>{list.title}</h2>
-				<button className="del-btn" onClick={() => removeList(list.id)}>
-					<Trash2 size={16} />
-				</button>
-			</div>
+		<div className="list-page" style={{ '--card-accent': color }}>
+    <header className="list-page-header">
+      <div>
+        <p className="workspace-label">MY WORKSPACE / {list.title}</p>
+        <h2 className="page-title">{list.title}</h2>
+        <p className="page-description">
+          Keep all list items and organize in one place.
+        </p>
+      </div>
 
-			<div className="user-input">
-				<input type="text" value={input} placeholder="e.g. Vegetables"
-					onChange={(e) => setInput(e.target.value)} onKeyDown={handleKeyDown} />
-				<button onClick={handleAdd} className="add-btn" disabled={input.trim() === ""}>Add</button>
-			</div>
+      <button
+        className="del-btn"
+        onClick={() => removeList(list.id)}
+        aria-label={`Delete ${list.title}`}
+      >
+        <Trash2 size={18} />
+      </button>
+    </header>
 
-			{list.items.length === 0 && <p className="no-items">No items yet.</p>}
+    <section className="add-activity">
+      <div className="user-input">
+        <input
+          type="text"
+          value={input}
+          placeholder="Add an item..."
+          onChange={(e) => setInput(e.target.value)}
+          onKeyDown={handleKeyDown}
+        />
+        <button
+          onClick={handleAdd}
+          className="add-btn"
+          disabled={input.trim() === ""}
+        >
+          Add
+        </button>
+      </div>
 
-			<ul>
-				{list.items.map((item) => (
-					<li key={item.id}>
-						<p>{item.value}</p>
-						<button onClick={() => removeListItem(list.id, item.id)}>
-							<X size={16} />
-						</button>
-					</li>
-				))}
-			</ul>
-		</div>
+      {list.items.length === 0 && (
+        <p className="no-items">No items yet. Add one to get started.</p>
+      )}
+
+      <ul>
+        {list.items.map((item) => (
+          <li key={item.id}>
+            <p>{item.value}</p>
+            <button
+              onClick={() => removeListItem(list.id, item.id)}
+              aria-label={`Remove ${item.value}`}
+            >
+              <X size={16} />
+            </button>
+          </li>
+        ))}
+      </ul>
+    </section>
+  </div>
 	)
 }

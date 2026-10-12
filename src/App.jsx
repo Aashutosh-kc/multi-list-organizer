@@ -46,7 +46,7 @@ export default function App(){
         <div className='list-bar'>
           <h3>Lists</h3>
           {list.length === 0 && <p className='muted'>No lists yet.</p>}
-          <AllLists list={list} currentListId={currentListId} setCurrentListId={setCurrentListId} />
+          <AllLists list={list} currentListId={currentListId} setCurrentListId={setCurrentListId}  colors={COLORS}/>
         </div>
       </div>
 
