@@ -10,16 +10,20 @@
 }
 
 
+
 .side-bar {
   display: flex;
   flex-direction: column;
   gap: 24px;
   min-width: 0;
+  height: calc(100vh - 48px);
+  box-sizing: border-box;
   padding: 24px 16px;
   background: #15161b;
   border: 1px solid #292a33;
   border-radius: 16px;
   align-self: start;
+  overflow: hidden;
 }
 
 .app-title {
@@ -48,11 +52,12 @@
 .list-bar {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  min-width: 0;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  gap: 8px;
   padding: 0;
   border: none;
-  border-radius: 0;
 }
 
 .list-bar h3 {
